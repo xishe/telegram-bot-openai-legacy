@@ -5,22 +5,22 @@ from aiogram.types import Message
 from aiogram.methods.send_message import SendMessage
 
 dp = Dispatcher()
-openai.api_key = "YOUR_OPENAI_API_KEY"
+openai.api_key = "open-ai-api-key" # API - Ключ от open ai / chat gpt
 
 
 @dp.message(Command(commands=["start"]))
 async def start(message: Message) -> None:
-    await message.answer("Привет!\nЯ бот - ГЕЙ \nЛюблю ебаться в очко с СЕРГЕЕМ")
+    await message.answer("Привет!\nЯ бот - ГЕЙ")
     return
 
 @dp.message(Command(commands=["pnh"]))
 async def start(message: Message) -> None:
-    await message.answer("от @The_Dicer\nПошёл на ХУЙ!")
+    await message.answer("СООБЩЕНИЕ") # СООБЩЕНИЕ, можно поменять
     return
 
 @dp.message(Command(commands=["dota"]))
 async def start(message: Message) -> None:
-    await message.answer("@The_Dicer \n@WorldOwner \n@VaddDie \n@xishee \nmaybe @Tatarich5 \nGOOOOOOOOOOOOOO \n ВВВВВВВВВВВВВВВВ DOTU!")
+    await message.answer("GOOOOOOOOOOOOOO \n ВВВВВВВВВВВВВВВВ DOTU!") # Без комментариев
     return
   
 @dp.message(Command(commands=["chat"]))
@@ -39,5 +39,5 @@ async def ii(message: Message) -> None:
     return
     
 
-bot = Bot("YOUR_TELEGRAM_BOT_TOKEN")
+bot = Bot("API - KEY") # API - KEY от бота в телеграмм 
 dp.run_polling(bot)
